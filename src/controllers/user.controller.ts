@@ -437,11 +437,11 @@ export const verifyEmail = async (req: Request, res: Response) => {
               <div class="content">
                   <h2>Hello ${userData.name},</h2>
                   <p>Thank you for creating an account with us! We are thrilled to have you on board.</p>
-                  <p>At Our E-commerce Platform, we offer a wide range of products to suit all your needs. To get started, click the button below to visit our store and explore our latest collections.</p>
+                  <p>At Our E-Health Platform, we offer a wide range of products to suit all your needs. To get started, click the button below to visit our store and explore our latest collections.</p>
                   <a href="www.gurisha.com" class="button"><span>Visit our store</span></a>
                   <p>If you have any questions or need assistance, feel free to contact our support team.</p>
                   <p>Happy shopping!</p>
-                  <p>Best regards,<br>Crafter</p>
+                  <p>Best regards,<br>MindMed</p>
               </div>
               <div class="footer">
                   <p>&copy; 2024 crafters. All rights reserved.</p>

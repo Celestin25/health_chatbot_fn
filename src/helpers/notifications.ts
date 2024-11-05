@@ -112,7 +112,7 @@ export async function sendEmailNotification(product: Product, message: string, s
         
                 <p>If you have any questions or need assistance, feel free to contact our support team.</p>
                 <p>Happy shopping!</p>
-                <p>Best regards,<br>Crafter</p>
+                <p>Best regards,<br>MindMed</p>
             </div>
             <div class="footer">
                 <p>&copy; 2024 crafters. All rights reserved.</p>
@@ -199,10 +199,10 @@ export async function sendEmailNotification(product: Product, message: string, s
         
                 <p>Incase you have any questions or need assistance, feel free to contact our support team.</p>
                 <p>Happy shopping!</p>
-                <p>Best regards,<br>Crafter</p>
+                <p>Best regards,<br>MindMed</p>
             </div>
             <div class="footer">
-                <p>&copy; 2024 crafters. All rights reserved.</p>
+                <p>&copy; 2024 mindmed. All rights reserved.</p>
                 <p><a class='email' href="mailto:${process.env.EMAIL}">${process.env.EMAIL}</a></p>
             </div>
         </div>
@@ -286,7 +286,7 @@ export async function sendEmailNotification(product: Product, message: string, s
         
                 <p>Incase you have any questions or need assistance, feel free to contact our support team.</p>
                 <p>Happy shopping!</p>
-                <p>Best regards,<br>Crafter</p>
+                <p>Best regards,<br>Mindmind</p>
             </div>
             <div class="footer">
                 <p>&copy; 2024 crafters. All rights reserved.</p>

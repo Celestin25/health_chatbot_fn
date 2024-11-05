@@ -107,7 +107,7 @@ export const approveVendorRequest = async (userId: string) => {
                   <a href="www.gurisha.com" class="button"><span>Get Started</span></a>
                   <p>If you have any questions or need assistance, feel free to contact our support team.</p>
                   <p>Welcome aboard and happy selling!</p>
-                  <p>Best regards,<br>Crafter Team</p>
+                  <p>Best regards,<br>MindMed</p>
               </div>
               <div class="footer">
                   <p>&copy; 2024 Crafters. All rights reserved.</p>
@@ -219,7 +219,7 @@ export const rejectVendorRequest = async (userId: string,  message: string) => {
               <p>Unfortunately, we are unable to approve your application at this time because <strong>${message.toLowerCase()}</strong>.</p>
               <p> Please feel free to reach out to our support team if you have any questions or require further information.</p>
               <p>Thank you for your understanding.</p>
-              <p>Best regards,<br>Crafter Team</p>
+              <p>Best regards,<br>MindMed</p>
               </div>
               <div class="footer">
                   <p>&copy; 2024 Crafters. All rights reserved.</p>

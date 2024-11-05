@@ -116,7 +116,7 @@ export const checkExpiringProducts = async (req?: Request, res?: Response) => {
                 <p>It's essential to take proactive measures to manage these expiring products effectively. Here are a few suggestions:</p>
                 <p>Consider offering special promotions or discounts to encourage customers to purchase these items before they expire. This can help minimize losses and increase sales.</p>
                 <a href="www.gurisha.com" class="button"><span>Add Discount</span></a>
-                <p>Best regards,<br>Crafters</p>
+                <p>Best regards,<br>MindMed</p>
             </div>
             <div class="footer">
                 <p>&copy; 2024 crafters. All rights reserved.</p>
@@ -244,7 +244,7 @@ export const checkExpiredProducts = async (req?: Request, res?: Response) => {
                             <ul>${product.name}</ul>
                             <p>It's essential to remove these expired products from your shelves to ensure the safety and satisfaction of your customers. Here are a few suggestions:</p>
                             <p>Consider disposing of these items according to your local regulations for expired products. You may also want to review your inventory management practices to prevent future occurrences.</p>
-                            <p>Best regards,<br>Crafters</p>
+                            <p>Best regards,<br>MindMed</p>
                         </div>
                         
                             <div class="footer">
