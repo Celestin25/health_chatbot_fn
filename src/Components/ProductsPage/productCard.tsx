@@ -15,14 +15,14 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   const navigate = useNavigate();
-
   const handleCardClick = () => {
     navigate(`/product/${product.productId}`);
   };
 
-  
-  const images = typeof product.image === 'string' ? JSON.parse(product.image) : product.image;
-
+  const images =
+    typeof product.image === "string"
+      ? JSON.parse(product.image)
+      : product.image;
 
   const imageUrl = Array.isArray(images) ? images[0] : images;
 
