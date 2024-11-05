@@ -43,7 +43,7 @@ export async function sendEmailNotification(product: Product, message: string, s
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Our E-commerce Platform</title>
+        <title>Welcome to Our E-Health Platform</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -129,7 +129,7 @@ export async function sendEmailNotification(product: Product, message: string, s
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Our E-commerce Platform</title>
+        <title>Welcome to Our E-health Platform</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -216,7 +216,7 @@ export async function sendEmailNotification(product: Product, message: string, s
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Welcome to Our E-commerce Platform</title>
+        <title>Welcome to Our E-health Platform</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
