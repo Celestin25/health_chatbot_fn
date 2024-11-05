@@ -79,7 +79,7 @@ const VendorRequestForm = ({
      errors.storeName ? "border border-red-500" : ""
     }`}
     type='text'
-    placeholder="Crafters' shoe Store"
+    placeholder="MindMend Pharmacy"
     disable={isSubmitting}
    />
    {errors.storeName && <p className='text-red-500 text-sm'>Required</p>}

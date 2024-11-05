@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 const AboutCrafters: React.FC = () => {
   const imageUrl =
-    "https://www.vocso.com/blog/wp-content/uploads/2022/02/eCommerce-Website-Features-1920-x-1080.jpg";
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxeevknOIcJSN4xsidP-5NnwoYpo3fU-hHxA&s";
   const imageUrl2 =
     "https://st.depositphotos.com/1001877/3814/i/450/depositphotos_38143799-stock-photo-e-commerce-shopping-cart-with.jpg";
   const { t } = useTranslation();
@@ -14,7 +14,7 @@ const AboutCrafters: React.FC = () => {
       <h2 className="text-2xl sm:text-3xl font-bold mb-12 mt-32 text-textprimary">
         {" "}
         {t("ABOUT")}
-        <span className="text-secondary"> CRAFTERS </span>
+        <span className="text-secondary"> MindMed </span>
       </h2>
       <div className="container flex flex-col xl:flex-row gap-8 md:gap-20">
         <div className="flex flex-row relative w-full xl:w-1/2   mb-8">
@@ -25,7 +25,7 @@ const AboutCrafters: React.FC = () => {
           />
           <img
             src={imageUrl2}
-            alt="About Crafters"
+            alt="About MindMed"
             className="w-[60%] absolute bottom-[-40px] right-0 h-[30vh] xl:h-[40vh] rounded-lg object-cover"
           />
         </div>

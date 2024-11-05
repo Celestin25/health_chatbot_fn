@@ -66,14 +66,13 @@ const Payment = (data: paymentProps) => {
       console.log(error);
     }
   };
-  console.log(streetAddress)
+  console.log(streetAddress);
   return (
     <div className=" w-1/2  p-10">
-     
       <div className="payment-content bg-white px-[30px] p-[20px]  flex flex-col gap-[10px]">
-      <header className=" text-blackText rounded-t-[5px]">
-        {t("PAYMENT DETAILS")}
-      </header>
+        <header className=" text-blackText rounded-t-[5px]">
+          {t("PAYMENT DETAILS")}
+        </header>
         {errorMessage}
         <form
           onSubmit={validation}
@@ -81,39 +80,40 @@ const Payment = (data: paymentProps) => {
           className=" flex flex-col gap-[20px] w-full "
         >
           <div className="w-[300px]">
-
-          <LocationButton
-            setCell={setCell}
-            setCity={setCity}
-            setDistrict={setDistrict}
-            setStreetAddress={setStreetAddress}
+            <LocationButton
+              setCell={setCell}
+              setCity={setCity}
+              setDistrict={setDistrict}
+              setStreetAddress={setStreetAddress}
             />
-            </div>
+          </div>
           <div className="contacts w-full gap-[10px] grid grid-cols-2 justify-between mb-5">
             <input
               id="district"
               value={district}
               type="text"
+              onChange={(e) => setDistrict(e.target.value)}
               className="contact street p-3 rounded-lg  border bg-transparent"
               placeholder={t("District")}
-              disabled={true}
+              disabled={false}
             />
 
             <input
               value={cell}
               type="text"
+              onChange={(e) => setCell(e.target.value)}
               className="contact street  p-3 rounded-[7px]  border bg-transparent"
               placeholder={t("Sector")}
-              disabled={true}
+              disabled={false}
             />
-          <input
-            value={streetAddress}
-            type="text"
-            onChange={(e)=> setStreetAddress(e.target.value)}
-            className="contact street  p-3 w-full rounded-[7px]  border bg-transparent"
-            placeholder={t("Street address")}
-            disabled={true}
-          />
+            <input
+              value={streetAddress}
+              type="text"
+              onChange={(e) => setStreetAddress(e.target.value)}
+              className="contact street  p-3 w-full rounded-[7px]  border bg-transparent"
+              placeholder={t("Street address")}
+              disabled={false}
+            />
           </div>
 
           <button

@@ -15,6 +15,7 @@ const checkoutSlice= apiSlice.injectEndpoints({
                 body: data
             })
         }),
+        
         createPayment: builder.mutation({
             query: ({data,token})=>{
                 return {

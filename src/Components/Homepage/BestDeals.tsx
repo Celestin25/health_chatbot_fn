@@ -20,10 +20,12 @@ const BestDeals: React.FC = () => {
               {t("Best Deals")}
             </h2>
             <p className="text-base text-[16px] mb-4 md:mb-6">
-              On the other hand, we denounce with righteous indignation and
-              dislike men who are so beguiled and demoralized by the charms of
-              pleasure of the moment, so blinded by desire, that they cannot
-              foresee the pain and trouble that are bound to ensue; and
+              Unlike ordinary soaps, our shampoo soap offers a luxurious blend
+              of natural ingredients that provide hydration and promote healthy
+              hair growth. Choose MindMed shampoo soap for an enriching
+              experience that goes beyond surface beauty—embrace a path to
+              lasting wellness for your hair. Discover the best deals today and
+              treat yourself to the quality your hair deserves!
             </p>
             <p className="text-base sm:text-sm md:text-xl font-semibold mb-4 md:mb-6">
               From &nbsp;&nbsp; {hotDeal[0].price} &nbsp;

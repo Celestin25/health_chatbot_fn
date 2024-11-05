@@ -110,16 +110,16 @@ const NewProduct = (property: productProps) => {
                         <Input label='Quantity' type='number' value={quantity} placeholder='Enter Product Price' error={error} onChange={(value) => setQuantity(value)} />
                         <Input label='Discount' type='number' value={discount} placeholder='Enter Product Discount' error={error} onChange={(value) => setDiscount(value)} />
                         <div className='flex flex-col gap-[6px] w-full'>
-                        <span className="text-[16px] font-[400] text-[#666666] font-outfit">Category</span>
+                        <span className="text-[16px] font-[400] text-[#666666] font-outfit">Medecine Category</span>
                         <select name="category" onChange={(e)=> setCategory(e.target.value)}  className={`p-3 border ${error ? 'border-red-500/60' : 'border-border/50'}  rounded-[12px] font-outfit outline-none placeholder:font-[400] w-full`} id="">
                         <option value="" >Please Select Category</option>
-                        <option value="Electronics">Electronics</option>
-                        <option value="Food">Food</option>
-                        <option value="Mechanism">Mechanism</option>
-                        <option value="Sport Kit">Sport Kit</option>
-                        <option value="Clothing">Clothing</option>
-                        <option value="Furniture">Furniture</option>
-                        <option value="Shoes">Shoes</option>
+                        <option value="Antibiotics">Antibiotics</option>
+                        <option value="Pain relief">Pain Relief</option>
+                        <option value="Skin Care">Skin Care</option>
+                        <option value="Vitamins">Vitamins</option>
+                        <option value="Suppliments">Supplements</option>
+                        <option value="Men's Health">Men's Health</option>
+                        <option value="First Aid">First Aid</option>
                         </select>
                         </div>
                         <Input label='Expiring Date' type='date' value={expiringDate} placeholder='Enter Product Name' error={error} onChange={(value) => setExpiringDate(value)} />
