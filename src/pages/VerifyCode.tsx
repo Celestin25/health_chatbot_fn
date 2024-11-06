@@ -108,7 +108,7 @@ const VerfiyCode = () => {
 
             </div>
             <div className='w-full p-1 bg-[#013362] flex items-center justify-center'>
-                <span className='text-[14px] text-[white] font-[400]'>@2024   crafters, all right reserved</span>
+                <span className='text-[14px] text-[white] font-[400]'>@2024   MindMed, all right reserved</span>
             </div>
         </div>
     )

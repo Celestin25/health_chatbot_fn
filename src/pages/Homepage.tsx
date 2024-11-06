@@ -7,6 +7,7 @@ import BestDeals from '../Components/Homepage/BestDeals';
 import AboutCrafters from '../Components/Homepage/AboutCrafters'
 import PopularProducts from '../Components/Homepage/PopularProducts';
 import VoiceflowChatWidget from '../Components/ChatBot';
+import MentalHealthChat from '../Components/MentalhealthChatbot';
 const Homepage: React.FC = () => {
   return (
     <div className=' bg-bgwhite'>

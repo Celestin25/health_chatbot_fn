@@ -9,11 +9,11 @@ import profileIcon from "../../asset/images/profileIcon.svg";
 import i18n from "../../Lib/i18n";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
+import MentalHealthChatPage from "../../pages/mentalhealthchat";
 import {
   useCartsQuery,
   useWishlistsQuery,
 } from "../../Redux/productsPage/productSlice";
-
 const Header: React.FC = () => {
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
   const [isUserDropdownOpen, setIsUserDropdownOpen] = useState(false);
@@ -74,6 +74,15 @@ const Header: React.FC = () => {
             <li>
               <a href="/products" className="hover:text-gray-300">
                 {t("Products")}
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                className="hover:text-gray-300"
+                onClick={() => navigate("/mental-health-chat")}
+              >
+                {t("Mental Health Assistant")}
               </a>
             </li>
             <li>
@@ -419,6 +428,9 @@ const Header: React.FC = () => {
                 </a>
                 <a href="/products" className="hover:text-gray-300">
                   Products
+                </a>
+                <a href="/mentalhealthchatbot" className="hover:text-gray-300">
+                  MentalHealthChat
                 </a>
                 <a href="/#contact-us" className="hover:text-gray-300">
                   Contact Us
