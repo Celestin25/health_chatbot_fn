@@ -12,6 +12,7 @@ import { useTranslation } from "react-i18next";
 import NavBar from "../Components/navBar";
 import VoiceflowChatWidget from "../Components/ChatBot";
 import Header from "../Components/Homepage/Homepage_header";
+
 interface Product {
   productId: string;
   name: string;
@@ -188,6 +189,7 @@ const Products = () => {
           productsPerPage={productsPerPage}
         />
       </div>
+
       <Footer />
     </div>
   );

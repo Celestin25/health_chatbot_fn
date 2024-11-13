@@ -9,7 +9,8 @@ import profileIcon from "../../asset/images/profileIcon.svg";
 import i18n from "../../Lib/i18n";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
-import MentalHealthChatPage from "../../pages/mentalhealthchat";
+import ChatBot from "../../pages/healthchat";
+
 import {
   useCartsQuery,
   useWishlistsQuery,
@@ -77,12 +78,8 @@ const Header: React.FC = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="hover:text-gray-300"
-                onClick={() => navigate("/mental-health-chat")}
-              >
-                {t("Mental Health Assistant")}
+              <a href="/chatbot" className="hover:text-gray-300">
+                {t("ChatBot")}
               </a>
             </li>
             <li>
@@ -429,8 +426,8 @@ const Header: React.FC = () => {
                 <a href="/products" className="hover:text-gray-300">
                   Products
                 </a>
-                <a href="/mentalhealthchatbot" className="hover:text-gray-300">
-                  MentalHealthChat
+                <a href="/chatbot" className="hover:text-gray-300">
+                  ChatBot
                 </a>
                 <a href="/#contact-us" className="hover:text-gray-300">
                   Contact Us

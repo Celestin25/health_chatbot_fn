@@ -36,6 +36,7 @@ import VendorAnalytics from "../pages/vendor/VendorAnalytics";
 import Chat from "../pages/chat/Chat";
 import OrderComponent from "../Components/orders";
 import Success from "../pages/Success";
+import ChatBot from "../pages/healthchat";
 import MentalHealthChat from "../Components/MentalhealthChatbot";
 const AppRoutes: React.FC = () => (
   <div>
@@ -51,6 +52,7 @@ const AppRoutes: React.FC = () => (
       <Route path="/authgoogle" element={<AuthGoogle />} />
       <Route path="/singleproduct" element={<Singlepage />} />
       <Route path="/products" element={<Products />} />
+      <Route path="/chatbot" element={<ChatBot />} />
       <Route path="/forgot-password" element={<Forgotpassword />} />
       <Route path="/product/:id" element={<Singlepage />} />
       <Route path="/order-tracking" element={<OrderTrackingPage />} />

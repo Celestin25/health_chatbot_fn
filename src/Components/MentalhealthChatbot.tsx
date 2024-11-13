@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { SendHorizontal, Building2 } from "lucide-react";
-import Footer from "./Homepage/Homepage_footer";
-import Header from "./Homepage/Homepage_header";
+
 // Define the Message interface
 interface Message {
   question: string;
@@ -16,6 +15,8 @@ const MentalHealthChat: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(false);
   const [selectedLanguage, setSelectedLanguage] = useState<"en" | "rw">("en");
   const [userId, setUserId] = useState<number | null>(1);
+  const messageContainerRef = useRef<HTMLDivElement>(null);
+  const pageContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("appLanguage");
@@ -23,6 +24,22 @@ const MentalHealthChat: React.FC = () => {
       setSelectedLanguage(savedLanguage as "en" | "rw");
     }
   }, []);
+
+  useEffect(() => {
+    // Scroll to the bottom of the message container when new messages are added
+    if (messageContainerRef.current) {
+      messageContainerRef.current.scrollTop =
+        messageContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  useEffect(() => {
+    // Scroll to the bottom of the page when new messages are added
+    if (pageContainerRef.current) {
+      pageContainerRef.current.scrollTop =
+        pageContainerRef.current.scrollHeight;
+    }
+  }, [messages]);
 
   const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -92,8 +109,7 @@ const MentalHealthChat: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-50">
-      < Header />
+    <div className="flex flex-col h-screen bg-gray-50" ref={pageContainerRef}>
       <div className="bg-white shadow-sm px-6 py-4 border-b">
         <div className="flex items-center gap-3">
           <Building2 className="h-8 w-8 text-gray-700" />
@@ -102,8 +118,13 @@ const MentalHealthChat: React.FC = () => {
               ? "Mental Health Assistant"
               : "Umufasha mu Buzima bwo Mumutwe"}
           </h1>
-          <button className="ml-auto bg-blue-500 text-white rounded-md py-2 px-4 hover:bg-blue-600">
-            {selectedLanguage === "en" ? "English" : "Kinyarwanda"}
+          <button
+            onClick={() =>
+              toggleLanguage(selectedLanguage === "en" ? "rw" : "en")
+            }
+            className="ml-auto bg-blue-500 text-white rounded-md py-2 px-4 hover:bg-blue-600"
+          >
+            {selectedLanguage === "en" ? "Kinyarwanda" : "English"}
           </button>
         </div>
       </div>
@@ -158,18 +179,21 @@ const MentalHealthChat: React.FC = () => {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto px-6 py-4">
+          <div
+            className="flex-1 overflow-y-auto px-3 py-2"
+            ref={messageContainerRef}
+          >
             {messages.map((message, index) => (
               <div
                 key={index}
-                className={`mb-4 flex ${
+                className={` flex ${
                   message.sender === "user"
                     ? "flex-row-reverse justify-end"
                     : "justify-start"
                 }`}
               >
                 <div
-                  className={`p-3 rounded-lg max-w-[70%] ${
+                  className={`p-1 rounded-lg max-w-[70%] ${
                     message.sender === "user"
                       ? "bg-blue-500 text-white"
                       : "bg-gray-100 text-gray-800"
@@ -184,8 +208,8 @@ const MentalHealthChat: React.FC = () => {
                       ? "Assistant:"
                       : "Umufasha:"}
                   </div>
-                  <div className="mt-1">{message.question}</div>
-                  <div className="mt-2 font-medium">
+                  <div className="mt-0">{message.question}</div>
+                  <div className="mt-0 font-medium">
                     {message.sender === "user"
                       ? selectedLanguage === "en"
                         ? "Answer:"
@@ -194,13 +218,13 @@ const MentalHealthChat: React.FC = () => {
                       ? "Response:"
                       : "Isubizo:"}
                   </div>
-                  <div>{message.answer}</div>
+                  <div className="mt-0">{message.answer}</div>
                 </div>
               </div>
             ))}
             {loading && (
               <div className="mr-auto max-w-md">
-                <div className="bg-gray-100 text-gray-800 p-3 rounded-lg">
+                <div className="bg-gray-100 text-gray-800 p-1 rounded-lg">
                   {selectedLanguage === "en"
                     ? "Typing..."
                     : "Ndimo kwandika..."}
@@ -225,18 +249,21 @@ const MentalHealthChat: React.FC = () => {
                 }
                 className="flex-1 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
+
               <button
                 type="submit"
                 disabled={loading}
-                className="bg-blue-500 text-white p-2 rounded-md hover:bg-blue-600 disabled:bg-blue-300"
+                className="bg-red-500 text-white p-2 rounded-md hover:bg-red-600 disabled:bg-red-300 flex items-center justify-center"
               >
                 <SendHorizontal className="h-5 w-5" /> {/* Send icon */}
+                <span className="ml-2">
+                  {selectedLanguage === "en" ? "Send" : "Ohereza"}
+                </span>
               </button>
             </div>
           </form>
         </div>
       </div>
-      < Footer />
     </div>
   );
 };
