@@ -40,7 +40,7 @@ const BestDeals: React.FC = () => {
           <div className="xl:w-1/2 p-10">
             <img
               src={hotDeal[0].image[0]}
-              alt="Samsung TV"
+              alt=""
               className="w-full h-full object-contain rounded-lg mx-auto sm:mx-0"
             />
           </div>
