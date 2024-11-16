@@ -11,7 +11,6 @@ import VoiceflowChatWidget from "../Components/ChatBot";
 const Homepage: React.FC = () => {
   return (
     <div className=" bg-bgwhite">
-      <VoiceflowChatWidget />
       <Header />
       <HeroSection />
       <PopularProducts />
@@ -19,7 +18,6 @@ const Homepage: React.FC = () => {
       <BestDeals />
       <ContactSection />
       <Footer />
-      <VoiceflowChatWidget />
     </div>
   );
 };

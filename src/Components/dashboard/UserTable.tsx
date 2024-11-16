@@ -48,7 +48,7 @@ const UserTable: React.FC = () => {
             }`}
             onClick={() => setActiveTab("Buyers")}
           >
-            Buyers ({buyersCount})
+            Patients ({buyersCount})
           </span>
           <span
             className={`px-2 text-sm lg:p-2 lg:px-4 rounded-[6px] cursor-pointer ${
@@ -58,7 +58,7 @@ const UserTable: React.FC = () => {
             }`}
             onClick={() => setActiveTab("Sellers")}
           >
-            Vendors ({sellersCount})
+            Pharmacist ({sellersCount})
           </span>
         </div>
         <Link to={viewAllUrl}>

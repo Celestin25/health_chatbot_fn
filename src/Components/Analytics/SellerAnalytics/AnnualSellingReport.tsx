@@ -13,15 +13,13 @@ import {
 
 import { Circles } from "react-loader-spinner";
 
-
 import SalesTable from "./SalesTable";
 import { AppDispatch, RootState } from "../../../Redux/store";
 import { fetchSellerSellingReport } from "../../../Redux/Analytic/SellerAnalytics/SellingReportSlice";
 import { useNavigate } from "react-router-dom";
 
-
 const SellerSellingReport = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch: AppDispatch = useDispatch();
   const { monthlySales, data, isLoading, error } = useSelector(
     (state: RootState) => state.sellerSellingReport
@@ -32,10 +30,9 @@ const SellerSellingReport = () => {
   useEffect(() => {
     dispatch(fetchSellerSellingReport());
   }, [dispatch]);
-  const handelRedirect = ()=>{
-    navigate('/vendor/weekly-details', {state:{datas:data}})
-
-  }
+  const handelRedirect = () => {
+    navigate("/vendor/weekly-details", { state: { datas: data } });
+  };
 
   if (isLoading) {
     return (
@@ -57,15 +54,13 @@ const SellerSellingReport = () => {
     return (
       <div className="flex justify-center items-center  h-[90%]">
         <div className="text-center">
-          <p className="text-red-600 font-semibold">
-            An error occurred. Please try again
-          </p>
-          <button
+          <p className="text-red-600 font-semibold"></p>
+          {/* <button
             className="mt-3 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
             onClick={() => window.location.reload()}
           >
             Retry
-          </button>
+          </button> */}
         </div>
       </div>
     );
@@ -113,7 +108,7 @@ const SellerSellingReport = () => {
       </div> */}
 
       <div
-        style={{ height: "400px",width:"100%" }}
+        style={{ height: "400px", width: "100%" }}
         className="flex flex-col m-auto text-xs bg-white mb-20 w-[50%] rounded-lg shadow-2xl border-gray-400 font-poppins"
       >
         <div className="py-2 pl-10 relative  ">

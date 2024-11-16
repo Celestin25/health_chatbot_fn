@@ -5,7 +5,7 @@ import VendorRequestList from "../../Components/dashboard/VendorRequestList";
 import InteractionCard from "../../Components/dashboard/InteractionCard";
 import { useSelectStoresQuery } from "../../Redux/Admin/sellersSlice";
 import { useSelectUsersQuery } from "../../Redux/Admin/usersSlice";
-import { useAllOrdersQuery} from "../../Redux/OrderSlice";
+import { useAllOrdersQuery } from "../../Redux/OrderSlice";
 
 function AdminHome() {
   const { data: sellers = [], refetch: refetchSellers } = useSelectStoresQuery(
@@ -30,7 +30,7 @@ function AdminHome() {
 
   const cardData = [
     {
-      name: "Vendors",
+      name: "Pharmacies",
       numbers: approvedSellers.length,
       icon: (
         <svg

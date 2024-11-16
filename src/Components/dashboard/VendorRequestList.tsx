@@ -24,7 +24,7 @@ const VendorRequestList: React.FC = () => {
     <div className="bg-white rounded-lg p-4">
       <div className="flex justify-between mb-4 pr-7">
         <span className="px-2 text-sm lg:p-2 lg:px-4 rounded-[6px] bg-secondary text-white">
-          Vendor Applications ({sellersCount})
+          Pharmacy Applications ({sellersCount})
         </span>
         <Link to="/admin/requests">
           <button className="sm:text-sm text-secondary">View all</button>

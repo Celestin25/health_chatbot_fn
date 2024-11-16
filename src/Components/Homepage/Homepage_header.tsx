@@ -185,7 +185,7 @@ const Header: React.FC = () => {
                     >
                       <a className="font-outfit text-lg text-white flex gap-3">
                         <img src={Bag} alt="" />
-                        {t("My Shop")}
+                        {t("My Pharmacy")}
                       </a>
                     </div>
                   )}

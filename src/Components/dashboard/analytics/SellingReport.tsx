@@ -44,14 +44,14 @@ const SellingReport = () => {
       <div className="flex justify-center items-center  h-[90%]">
         <div className="text-center">
           <p className="text-red-600 font-semibold">
-            An error occurred. Please try again
+          
           </p>
-          <button
+          {/* <button
             className="mt-3 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
             onClick={() => window.location.reload()}
           >
             Retry
-          </button>
+          </button> */}
         </div>
       </div>
     );

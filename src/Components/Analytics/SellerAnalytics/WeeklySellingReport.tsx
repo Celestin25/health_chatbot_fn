@@ -19,18 +19,15 @@ import { Circles } from "react-loader-spinner";
 import { useNavigate } from "react-router-dom";
 
 const SellerWeeklyReport = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const dispatch: AppDispatch = useDispatch();
-  const { SellerWeeklySales,isLoading,data,error } = useSelector(
+  const { SellerWeeklySales, isLoading, data, error } = useSelector(
     (state: RootState) => state.SellerWeeklySales
   );
   const [showSales, setShowSales] = useState(false);
-  const handelRedirect = ()=>{
-    navigate('/vendor/weekly-details', {state:{datas:data}})
-
-  }
-  
-
+  const handelRedirect = () => {
+    navigate("/vendor/weekly-details", { state: { datas: data } });
+  };
 
   useEffect(() => {
     dispatch(fetchSellerWeeklyReport());
@@ -56,15 +53,14 @@ const SellerWeeklyReport = () => {
     return (
       <div className="flex justify-center items-center  h-[90%]">
         <div className="text-center">
-          <p className="text-red-600 font-semibold">
-            An error occurred. Please try again
-          </p>
-          <button
+          <p className="text-red-600 font-semibold"> </p>
+
+          {/* <button
             className="mt-3 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
             onClick={() => window.location.reload()}
           >
             Retry
-          </button>
+          </button> */}
         </div>
       </div>
     );
@@ -98,8 +94,6 @@ const SellerWeeklyReport = () => {
       date: totalSale.date,
     })
   );
-
-
 
   return (
     <div className="h-full">
@@ -141,7 +135,10 @@ const SellerWeeklyReport = () => {
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="TotalSales" fill="#013362" barSize={30}
+            <Bar
+              dataKey="TotalSales"
+              fill="#013362"
+              barSize={30}
               onClick={handelRedirect}
             />
           </BarChart>

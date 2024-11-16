@@ -288,7 +288,7 @@ const SignUp: React.FC = () => {
       </div>
       <div className="w-full p-1 bg-primary flex items-center justify-center">
         <span className="text-[14px] text-[white] font-[400]">
-          @2024 crafters, all right reserved
+          @2024 MindMed, all right reserved
         </span>
       </div>
     </div>

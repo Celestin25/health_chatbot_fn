@@ -91,15 +91,11 @@ const SellersView: React.FC = () => {
     return (
       <div className="flex justify-center items-center  h-[90%]">
         <div className="text-center">
-          <p className="text-red-600 font-semibold">
-            An error occurred. Please try again later.
-          </p>
+          <p className="text-red-600 font-semibold"></p>
           <button
             className="mt-3 px-4 py-2 bg-primary text-white rounded-md hover:bg-secondary"
             onClick={() => window.location.reload()}
-          >
-            Retry
-          </button>
+          ></button>
         </div>
       </div>
     );
@@ -109,13 +105,13 @@ const SellersView: React.FC = () => {
     <div className="w-full bg-white rounded-lg shadow-md overflow-hidden lg:mb-12 xl:ml-[5%] mt-3">
       {filteredSellers.length === 0 ? (
         <div className="items-center p-4 text-center text-secondary font-semibold">
-          No Approved Sellers
+          No Approved Pharmacy
         </div>
       ) : (
         <>
           <div className="flex justify-between items-center p-4">
             <h1 className="text-xl font-semibold text-gray-600">
-              Approved Sellers
+              Approved Pharmacy
             </h1>
             <input
               type="text"

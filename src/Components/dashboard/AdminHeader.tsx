@@ -38,8 +38,8 @@ const AdminHeader = () => {
   const userData: any = useAuthUser();
 
   useEffect(() => {
-    if (pathName === "/admin/sellers") {
-      setPageTitle("Sellers Page");
+    if (pathName === "/admin/pharmacies") {
+      setPageTitle("Pharmacies Page");
     } else if (pathName === "/admin/users") {
       setPageTitle("Users Page");
     } else if (pathName === "/admin/analytics") {
@@ -47,7 +47,7 @@ const AdminHeader = () => {
     } else if (pathName === "/admin/settings") {
       setPageTitle("Settings Page");
     } else if (pathName === "/admin/requests") {
-      setPageTitle("Vendor Applications");
+      setPageTitle("Pharmacy Applications");
     } else {
       setPageTitle("Dashboard Page");
     }
@@ -68,7 +68,7 @@ const AdminHeader = () => {
       <div className=" space-even">
         <div className="flex items-center justify-center">
           <div className=" md:hidden">
-            <svg
+            {/* <svg
               width="74"
               height="24"
               viewBox="0 0 74 24"
@@ -102,10 +102,10 @@ const AdminHeader = () => {
                   <rect width="74" height="24" fill="white" />
                 </clipPath>
               </defs>
-            </svg>
+            </svg> */}
           </div>
           <div className="hidden md:flex lg:hidden">
-            <svg
+            {/* <svg
               width="150"
               height="49"
               viewBox="0 0 150 49"
@@ -139,7 +139,7 @@ const AdminHeader = () => {
                   <rect width="150" height="48.718" fill="white" />
                 </clipPath>
               </defs>
-            </svg>
+            </svg> */}
           </div>
         </div>
       </div>
@@ -186,8 +186,8 @@ const AdminHeader = () => {
             <Link to="/admin/users" className="hover:text-gray-300">
               Users
             </Link>
-            <Link to="/admin/sellers" className="hover:text-gray-300">
-              Sellers
+            <Link to="/admin/pharmacies" className="hover:text-gray-300">
+              Pharmacies
             </Link>
             <Link to="/admin/requests" className="hover:text-gray-300">
               Applications
