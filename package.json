@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "dev": "webpack serve --env NODE_ENV=production",
+    "dev": "webpack serve --env NODE_ENV=development",
     "build": "webpack --env NODE_ENV=production",
     "test": "jest --coverage"
   },
